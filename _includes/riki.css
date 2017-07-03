@@ -1,0 +1,4 @@
+
+{% if riki-layout==page-seule %}
+html,body { height: 100%; }
+{% endif %}

@@ -1,0 +1,11 @@
+# Description du menu
+
+logo:
+  image: "img/logo-riki-transition.jpg"
+  description: "logo de Rimouski en transition"
+sections:
+  - decouvrir
+  - simpliquer
+  - soutiller
+  - sinformer
+  - contact
