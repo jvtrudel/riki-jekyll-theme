@@ -3,6 +3,7 @@
 logo:
   image: "img/logo-riki-transition.jpg"
   description: "logo de Rimouski en transition"
+  tag: index
 sections:
   - decouvrir
   - simpliquer
