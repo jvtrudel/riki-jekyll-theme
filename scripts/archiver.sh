@@ -39,8 +39,8 @@ mv _data/res/* $path/ressources/descriptions/.
 
 # utilisateur
 mkdir $path/utilisateur
-mv _data/usr $path/utilisateur
+mv _data/usr/* $path/utilisateur/.
 
 # designer
 mkdir $path/designer/.
-mv _data/design $path/designer/.
+mv _data/design/* $path/designer/.
