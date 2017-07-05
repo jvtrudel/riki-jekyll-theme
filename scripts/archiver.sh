@@ -1,6 +1,10 @@
 #! /usr/bin/env bash
 #
 # desc: prendre les fichiers actifs et les archiver (dans le répertoire archives)
+# amélioration:
+#  - quelques tests... probablement
+#  - liste de pages d'exclusion
+#  - présence et exclusion de fichiers .gitkeep dans les répertoires
 
 
 # tester s'il y a un projet nom d'archive
