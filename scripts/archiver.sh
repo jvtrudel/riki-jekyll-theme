@@ -42,5 +42,5 @@ mkdir $path/utilisateur
 mv _data/usr/* $path/utilisateur/.
 
 # designer
-mkdir $path/designer/.
+mkdir $path/designer
 mv _data/design/* $path/designer/.
