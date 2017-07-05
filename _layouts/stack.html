@@ -1,5 +1,9 @@
 ---
 layout: basic
 ---
-{% include menu.html %}
+{% if page.menu %}
+ {% include menu.html menu=page.menu %}
+{% elsif site.data.designer.menu %}
+ {% include menu.html menu=site.data.designer.menu %}
+{% endif %}
 {{content}}

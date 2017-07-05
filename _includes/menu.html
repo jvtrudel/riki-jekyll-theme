@@ -8,33 +8,33 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-<a class="navbar-brand" href="#">
-  <img src={{site.baseurl}}"/img/logo-riki-transition.jpg" width="auto" height="100" alt="">
+<a class="navbar-brand" href="{{site.baseurl}}">
+  <img src="{{include.menu.logo.img.src}}" width="auto" height="{{site.data.dev.menu.logo.height}}" alt="{{include.menu.logo.img.alt}}">
 </a>
 
 
 
   <div class="collapse navbar-collapse justify-content-end">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil</a>
+      {%for tag in include.menu.sections %}
+        {% assign active=""%}
+        {% assign t =".md"%}
+        {% assign tpath = tag | append: t %}
+        {% if page.path == tpath %}
+          {% assign active="active"%}
+        {% endif %}
+        {%for ipage in site.pages%}
+<!-- ipage.path: {{ipage.path}}  "{{tag}}.md"  {{tag}}.md  {{ipage.path}}=="{{tag}}.md"  {{ipage.path}}=={{tag}}.md </br> !-->
+          {%if ipage.path == tpath %}
+              {% assign ref={{ipage.url}}%}
+              {% assign titre={{ipage.titre}} %}
+      <li class="nav-item {{active}}">
+        <a class="nav-link" href="{{ref}}">{{titre}}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Découvrir</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">S'impliquer</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">S'outiller</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">S'informer</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
+          {%endif%}
+        {%endfor%}
+
+      {% endfor %}
     </ul>
   </div>
 </nav>

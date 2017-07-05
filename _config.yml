@@ -23,6 +23,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendors
-  - bootstrap.sh
+  - scripts
+  - archives
 collections:
   - nouvelles

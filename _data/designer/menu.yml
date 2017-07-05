@@ -1,0 +1,10 @@
+# Description du menu
+
+logo:
+  img:
+    src: "img/logo-riki-transition.jpg"
+    alt: "logo de Rimouski en Transition"
+sections:
+  - carousel
+  - image
+  - index
