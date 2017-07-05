@@ -9,7 +9,6 @@
 # tester si le projet existe
 path=archives/$1
 if [ ! -d $path ]; then echo "Vous n'avez pas de projet portant ce nom dans vos archives"; exit -1; fi
-mkdir $path
 
 # tester s'il y a un projet en place
 # 1- pages standard
@@ -42,3 +41,5 @@ mv -f $path/utilisateur/* _data/usr/.
 # designer
 mkdir -p _data/design
 mv -f $path/designer/* _data/design/.
+
+rm -rf $path
