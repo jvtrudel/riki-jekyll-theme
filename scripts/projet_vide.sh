@@ -53,5 +53,5 @@ git add -A
 git commit -m "initialisation de votre site riki.jekyll"
 
 
-git submodule add $path
-git commit -m "ajout du site $path"
+git submodule add ./$path
+git commit -m "ajout du site $projet"
