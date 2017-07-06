@@ -2,7 +2,7 @@
 #
 # desc: génère un projet vide
 
-
+ici=`pwd`
 
 projet=$1
 path=archives/$1
@@ -40,9 +40,10 @@ touch $path/utilisateur/.gitkeep
 mkdir -p $path/designer
 touch $path/designer/.gitkeep
 
+cd $path
 # initialisation git
    # éventuellement, on enregistrera le site à un serveur et on l'incluera comme submodule
-git init $path
+git init
   # demander l'adresse du serveur git
   # demander le nom d'utilisateur
   # demander dans quelle ressource gpg se trouve les informations d'authentification au serveur + clefs api
@@ -52,6 +53,6 @@ git init $path
 git add -A
 git commit -m "initialisation de votre site riki.jekyll"
 
-
+cd $ici
 git submodule add ./$path
 git commit -m "ajout du site $projet"
