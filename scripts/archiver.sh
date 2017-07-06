@@ -31,7 +31,7 @@ for file in $(ls *.md)
 mkdir $path/collections
 for collection in nouvelles
   do
-    mv _$collection $path/collections/.
+    mv _$collection $path/collections/$collection
   done
 
 # ressources
