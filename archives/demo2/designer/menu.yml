@@ -1,0 +1,10 @@
+# Description du menu
+
+logo:
+  img:
+    src: "img/printemps.jpg"
+    alt: "Arbre rose au printemps"
+  ref: index
+sections:
+  - index
+  - nouvelles-2

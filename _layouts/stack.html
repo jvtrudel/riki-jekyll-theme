@@ -1,9 +1,19 @@
 ---
 layout: basic
 ---
-{% if page.menu %}
- {% include menu.html menu=page.menu %}
-{% elsif site.data.design.menu %}
- {% include menu.html menu=site.data.design.menu %}
+{% if page.meta %}
+  {% include headers/{{ site.data.design.headers.nouvelles }}.html meta=page.meta %}
 {% endif %}
-{{content}}
+
+
+{% if page.collection %}
+   {% if page.collection=="nouvelles"%}
+     {% for nouvelle in site.nouvelles %}
+        {% include categories/nouvelle.html page=nouvelle bref=page.bref %}
+     {% endfor %}
+   {% endif %}
+{% endif %}
+
+{% if page.heterogene %}
+   {% include pas_encore.html message="stack aux sections hétérogènes."%}
+{% endif %}

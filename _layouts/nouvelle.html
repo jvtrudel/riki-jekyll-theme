@@ -1,8 +1,8 @@
----
-layout: stack
----
-<div class="jumbotron">
+
+{% if page.bref == "oui" %}
+<div class="container">
 <h1>{{page.titre}}</h1>
 <p><small>{{page.bref}}</small></p>
 </div>
 {{content}}
+{% endif %}

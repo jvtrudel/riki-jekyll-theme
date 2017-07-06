@@ -27,7 +27,7 @@
 <!-- ipage.path: {{ipage.path}}  "{{tag}}.md"  {{tag}}.md  {{ipage.path}}=="{{tag}}.md"  {{ipage.path}}=={{tag}}.md </br> !-->
           {%if ipage.path == tpath %}
               {% assign ref={{ipage.url}}%}
-              {% assign titre={{ipage.titre}} %}
+              {% assign titre={{ipage.meta.titre}} %}
       <li class="nav-item {{active}}">
         <a class="nav-link" href="{{ref}}">{{titre}}</a>
       </li>

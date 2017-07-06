@@ -3,6 +3,17 @@
 {% include head.html parameters=site.data.dev.head riki-layout=page.riki-layout %}
   <body>
     <div class="container-fluid no-margin"><!-- semble nécessiter container-fluid pour avoir une page pleine!-->
+     {% if page.menu != false %}
+        {% if page.menu=="oui" %}
+          {%if site.data.design.menu %}
+            {% include menu.html menu=site.data.design.menu %}
+          {% elsif site.data.dev.menu %}
+             (site.data.dev.menu, non implémenté!)
+          {% endif %}
+        {% else %}
+        {% include menu.html menu=page.menu %}
+        {% endif%}
+     {% endif %}
      {{content}}
    </div>
   </body>

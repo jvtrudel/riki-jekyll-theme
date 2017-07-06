@@ -1,0 +1,13 @@
+
+{% if include.bref == "oui" %}
+<div class="container">
+<h1>{{include.page.titre}}</h1>
+<p><small>{{ include.page.excerpt | strip_html | truncatewords:75 }}</small></p>
+</div>
+{% else %}
+<div class="container">
+<h1>{{include.page.titre}}</h1>
+<p><small>{{include.page.bref}}</small></p>
+{{include.page.content}}
+</div>
+{% endif %}
