@@ -23,7 +23,7 @@ for file in $(ls *.md)
     # à faire: permettre une liste d'exception
     if [ "$file" != "readme.md" ];
       then
-        mv $file $path/pages/.
+        mv -f $file $path/pages/.
     fi
   done
 
@@ -31,20 +31,20 @@ for file in $(ls *.md)
 mkdir $path/collections
 for collection in nouvelles
   do
-    mv _$collection $path/collections/$collection
+    mv -f _$collection $path/collections/$collection
   done
 
 # ressources
 mkdir $path/ressources
 mkdir $path/ressources/images
 mkdir $path/ressources/descriptions
-mv img/* $path/ressources/images/.
-mv _data/res/* $path/ressources/descriptions/.
+mv -f img/* $path/ressources/images/.
+mv -f _data/res/* $path/ressources/descriptions/.
 
 # utilisateur
 mkdir $path/utilisateur
-mv _data/usr/* $path/utilisateur/.
+mv -f _data/usr/* $path/utilisateur/.
 
 # designer
 mkdir $path/designer
-mv _data/design/* $path/designer/.
+mv -f _data/design/* $path/designer/.

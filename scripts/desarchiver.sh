@@ -20,24 +20,24 @@ if [ ! -d $path ]; then echo "Vous n'avez pas de projet portant ce nom dans vos 
 
 
 # copie des pages standard
-cp $path/pages/* .
+cp $path/pages/* .  2> /dev/null
 
 # migration des collections
 for collection in nouvelles
   do
-    cp -f $path/collections/$collection _$collection
+    cp -r $path/collections/$collection _$collection  2> /dev/null
   done
 
 # ressources
 mkdir -p img
-cp -f $path/ressources/images/* img/.
+cp $path/ressources/images/* img/.  2> /dev/null
 mkdir -p _data/res
-cp -f $path/ressources/descriptions/* _data/res/.
+cp $path/ressources/descriptions/* _data/res/.  2> /dev/null
 
 # utilisateur
 mkdir -p _data/usr/
-cp -f $path/utilisateur/* _data/usr/.
+cp $path/utilisateur/* _data/usr/.  2> /dev/null
 
 # designer
 mkdir -p _data/design
-cp -f $path/designer/* _data/design/.
+cp $path/designer/* _data/design/.  2> /dev/null
