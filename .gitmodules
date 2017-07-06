@@ -1,6 +1,0 @@
-[submodule "vendors/primer-css"]
-	path = vendors/primer-css
-	url = git@github.com:primer/primer-css.git
-[submodule "vendors/bootstrap"]
-	path = vendors/bootstrap
-	url = git@github.com:twbs/bootstrap.git

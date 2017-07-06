@@ -40,19 +40,22 @@ touch $path/utilisateur/.gitkeep
 mkdir -p $path/designer
 touch $path/designer/.gitkeep
 
-cd $path
+
+
+# ok. tant qu'on aura pas de lien avec l'api d'un serveur, ce sera difficile d'inclure des sous-modules qui ne sont pas au premier niveau de l'arborescence du projet
+#cd $path
 # initialisation git
    # éventuellement, on enregistrera le site à un serveur et on l'incluera comme submodule
-git init
+#git init
   # demander l'adresse du serveur git
   # demander le nom d'utilisateur
   # demander dans quelle ressource gpg se trouve les informations d'authentification au serveur + clefs api
   # demander si la clef la configuration ssh est correcte
   # créer un projet sur le serveur
   # git remote add origin git@$serverurl:$username/$projet.git
-git add -A
-git commit -m "initialisation de votre site riki.jekyll"
+#git add -A
+#git commit -m "initialisation de votre site riki.jekyll"
 
-cd $ici
-git submodule add ./$path
-git commit -m "ajout du site $projet"
+#cd $ici
+#git submodule add ./$path
+#git commit -m "ajout du site $projet"
