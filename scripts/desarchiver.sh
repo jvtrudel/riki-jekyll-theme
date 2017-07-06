@@ -25,6 +25,7 @@ cp $path/pages/* .  2> /dev/null
 # migration des collections
 for collection in nouvelles
   do
+    mkdir _$collection 2> /dev/null
     cp -r $path/collections/$collection/* _$collection/.  2> /dev/null
   done
 
