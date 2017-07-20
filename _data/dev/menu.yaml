@@ -1,2 +1,13 @@
 logo:
   height: 100px
+navbar:
+  color: ffffff
+  text: 000000
+  link: 000000
+item:
+  active:
+    color: ffffff
+    background-color: 080808
+  hover:
+    color: 080808
+    background-color: 888888

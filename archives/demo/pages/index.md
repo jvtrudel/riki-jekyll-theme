@@ -1,6 +1,7 @@
 ---
 layout: stack
-titre: Riki thème
+meta:
+  titre: Riki thème
 menu:
   logo:
     ref: index

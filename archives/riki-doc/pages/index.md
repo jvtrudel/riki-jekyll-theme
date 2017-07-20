@@ -1,3 +1,19 @@
+---
+layout: basic
+meta:
+  titre: sommaire
+  bref: >
+    Brève description de ce qu'est le thème Jekyll riki et comment s'en servir
+menu:
+  logo:
+    img:
+      src: "img/printemps.jpg"
+      alt: "Arbre rose au printemps"
+    ref: index
+  sections:
+    - index
+    - cli
+---
 # Riki, un thème Jekyll
 
 ## Séparation des responsabilités

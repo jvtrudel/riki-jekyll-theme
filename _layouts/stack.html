@@ -15,5 +15,7 @@ layout: basic
 {% endif %}
 
 {% if page.heterogene %}
-   {% include pas_encore.html message="stack aux sections hétérogènes."%}
+   {% for section in page.heterogene%}
+     {% include pas_encore.html message="stack aux sections hétérogènes."%}
+   {% endfor %}
 {% endif %}

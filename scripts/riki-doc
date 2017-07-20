@@ -1,0 +1,72 @@
+#! /usr/bin/env bash
+
+root=archives/riki-doc
+
+
+menu="menu:
+  logo:
+    img:
+      src: \"img/printemps.jpg\"
+      alt: \"Arbre rose au printemps\"
+    ref: index
+  sections:
+    - index
+    - cli"
+
+
+function md2basic {
+
+
+  if [ $# -lt 2 ]; then
+    target=$1
+  else
+    target=$2
+  fi
+
+  echo "---" > $root/$target.md
+  echo "layout: basic" >> $root/$target.md
+  echo "$menu" >> $root/$target.md
+  echo "---" >> $root/$target.md
+  cat $1.md >> $root/$target.md
+}
+
+
+
+rm -rf $root
+mkdir $root
+
+mkdir $root/pages
+# page d'accueil
+target=pages/index
+echo "---" > $root/$target.md
+echo "layout: basic">>$root/$target.md
+echo "meta:
+  titre: sommaire
+  bref: >
+    Brève description de ce qu'est le thème Jekyll riki et comment s'en servir">>$root/$target.md
+echo "$menu" >> $root/$target.md
+echo "---" >> $root/$target.md
+cat readme.md >> $root/$target.md
+
+#md2basic readme pages/index
+
+
+# page cli
+target=$root/pages/cli.md
+echo "---" > $target
+echo "layout: basic" >> $target
+echo "meta:
+  titre: cli
+  bref: >
+    Outils **command line interface">>$target
+echo "$menu" >> $target
+echo "---" >> $target
+cat scripts/readme.md >> $target
+
+#md2basic scripts/readme pages/cli
+
+mkdir $root/ressources
+mkdir $root/ressources/images
+cp archives/demo2/ressources/images/printemps.jpg $root/ressources/images/printemps.jpg
+
+riki-update riki-doc

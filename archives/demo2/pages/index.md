@@ -1,9 +1,9 @@
 ---
 layout: stack
 meta:
-  titre: Page de nouvelles
+  titre: Page 0
   bref: >
-    Bienvenu à la page de nouvelle! En espérant que vous vous trouverez ce dont vous aurez besoin.
+    Page de nouvelles. Avec menu. Présentation en brèves.
 menu: oui  # <- par défaut?
 bref: oui  # <- par défaut?
 

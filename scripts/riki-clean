@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+
+riki-archive riki-dump
+rm -rf archives/riki-dump

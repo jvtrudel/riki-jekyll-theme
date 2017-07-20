@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+if [ -z "$1" ]; then
+  echo "Il n'y a pas de nom projet spécifié"
+  return -1
+fi
+
+
+
+riki-archive riki-dump
+riki-install $1
+rm -rf archives/riki-dump

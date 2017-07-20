@@ -1,5 +1,6 @@
 ---
 layout: stack
-titre: images
+meta:
+  titre: images
 ---
 # page de démonstration des images

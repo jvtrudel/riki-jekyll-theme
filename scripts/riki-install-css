@@ -1,0 +1,35 @@
+#! /usr/bin/env bash
+#
+# Quelques opérations nécessaire au déploiement du templates
+
+# paramètre
+cssFramework="$1" # primerCss ou bootstrap
+
+
+# mettre à jour et installer le framework primer-css
+if [ "$2" == "reset" ]
+then
+  rm -rf _sass/*
+fi
+
+if [ $cssFramework == "primerCss" ]
+then
+#  git submodule update vendors/primer-css
+  cp -r `ls -d vendors/primer-css/modules/*/ | awk '{ print substr($0, 1, length($0)-1) }'` _sass/.
+
+elif [ $cssFramework == "bootstrap" ]
+then
+  echo $cssFramework
+#  git submodule update vendors/bootstrap
+  cp -r vendors/bootstrap/scss/* _sass/.
+  cp -r vendors/bootstrap/js/dist/* js/.
+elif [ $cssFramework == "riki" ]
+then
+  echo $cssFramework
+  cp -r vendors/riki-css/riki.scss _sass/.
+else
+    echo "Désolé, je ne sais pas quoi faire avec le framework '$cssFramework'."
+fi
+
+# Définir le layout général
+# options: stack

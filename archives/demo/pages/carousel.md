@@ -1,6 +1,7 @@
 ---
 layout: stack
-titre: les caroussels
+meta:
+  titre: les caroussels
 menu: non
 ---
 # Page de démonstration des carousel
