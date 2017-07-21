@@ -1,0 +1,23 @@
+---
+layout: basic
+---
+{% capture a %}
+  {% include functions/select page=page param="test.glitch" %}
+{% endcapture %}
+</br>glitch: {{a}}
+{% capture b %}
+  {% include functions/select page=page param="test.gluck" %}
+{% endcapture %}
+</br>gluck: {{b}}
+{% capture a %}
+  {% include functions/select page=page param="test.blop" %}
+{% endcapture %}
+</br>blop: {{a}}
+</br></br>
+{ % capture b % }
+  { % include functions/get_param data=site.data.dev param="test.glitch" % }
+{ % endcapture % }
+
+
+
+{{content}}

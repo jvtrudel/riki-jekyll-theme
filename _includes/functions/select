@@ -1,0 +1,29 @@
+  {% capture mpage %}
+    {% include functions/get_param data=include.page param=include.param %}
+  {% endcapture %}
+  {% capture usr %}
+    {% include functions/get_param data=site.data.usr param=include.param %}
+  {% endcapture %}
+  {% capture design %}
+    {% include functions/get_param data=site.data.design param=include.param %}
+  {% endcapture %}
+  {% capture dev %}
+    {% include functions/get_param data=site.data.dev param=include.param %}
+  {% endcapture %}
+{% if mpage contains "wtf-riki" %}
+  {% if usr contains "wtf-riki" %}
+      {% if design contains "wtf-riki" %}
+        {% if dev contains "wtf-riki" %}
+        riki-wtf
+        {%else%}
+        {{dev}}
+        {%endif%}
+      {%else%}
+      {{design}}
+      {%endif%}
+  {%else%}
+  {{usr}}
+  {%endif%}
+{% else %}
+{{mpage}}
+{%endif%}

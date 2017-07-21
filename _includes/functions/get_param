@@ -1,0 +1,16 @@
+{% assign lst = {{include.param}} | split: '.' %}
+{% assign vari = include.data %}
+{% assign ok = "oui" %}
+{% for elem in lst %}
+   {% if  vari[{{elem}}] %}
+     {% assign vari= vari[{{elem}}] %}
+   {% else %}
+      {% assign ok = "non" %}
+      {% break %}
+   {% endif %}
+{% endfor %}
+{% if  ok == "oui" %}
+{{vari}}
+  {% else %}
+wtf-riki
+{% endif %}
